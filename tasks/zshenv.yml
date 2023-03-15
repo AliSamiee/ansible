@@ -1,0 +1,11 @@
+- name: Ensure zsh directory exists.
+  file:
+    dest: /etc/zsh
+    mode: '0755'
+    state: directory
+
+- name: Add ZDOTDIR
+  copy:
+    content: 'export ZDOTDIR="$HOME"/.config/zsh'
+    dest: /etc/zsh/zshenv
+    mode: '0644'

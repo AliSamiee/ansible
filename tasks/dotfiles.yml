@@ -1,0 +1,8 @@
+- name: Cloning dotfiles
+  git:
+    repo: 'git@github.com:AliSamiee/dotfiles.git'
+    dest: "{{ homedir }}/dotfiles"
+    accept_hostkey: true
+
+- name: Stow dotfiles
+  shell: cd $HOME/dotfiles && stow --no-folding configs

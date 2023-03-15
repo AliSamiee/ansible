@@ -1,0 +1,27 @@
+- name: Installing base packages
+  package:
+    name:
+      - git
+      - base-devel
+      - wget
+      - curl
+      - xterm
+      - ranger
+      - i3
+      - rofi
+      - dunst
+      - neovim
+      - alacritty
+      - tmux
+      - picom
+      - zsh
+      - maim
+      - nautilus
+      - htop
+      - stow
+      - fzf
+      - xclip
+      - tldr
+      - ripgrep
+      - firefox
+      - chromium

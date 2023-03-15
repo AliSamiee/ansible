@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  vars:
+    homedir: "{{ lookup('env','HOME') }}" 
+    builddir: "{{ homedir }}/.build"
+    source_key: "./.ssh/id_ed25519"
+    dest_key: "{{ homedir }}/.ssh/id_ed25519"
+
+  pre_tasks:
+  - name: do a "pacman -Syu"
+    community.general.pacman:
+      update_cache: true
+      upgrade: true
+
+  tasks:
+    - include: tasts/ssh.yml
+    - include: tasks/base-packages.yml
+    - include: tasks/yay.yml
+    - include: tasks/yay-packages.yml
+    - include: tasks/zshenv.yml
+    - include: tasks/zap.yml
+    - include: tasks/dotfiles.yml

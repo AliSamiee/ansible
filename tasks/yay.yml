@@ -1,0 +1,16 @@
+- name: Clone yay
+  git:
+    repo: https://aur.archlinux.org/yay-bin.git
+    dest: "{{ srcdir }}/yay"
+    update: true
+
+- name: Build and install yay
+  command:
+    chdir: "{{ srcdir }}/yay"
+    cmd: "makepkg -sfi --noconfirm"
+    creates: /usr/bin/yay
+
+- name: Download ansible yay module
+  ansible.builtin.get_url:
+    url: https://github.com/mnussbaum/ansible-yay/blob/4fd5ec87f3c3ec5366376b30317714fee7e20b06/yay
+    dest: ./library

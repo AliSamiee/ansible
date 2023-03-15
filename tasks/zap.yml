@@ -1,0 +1,2 @@
+- name: Installing Zap plugin manager
+  shell: zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh)
