@@ -1,4 +1,5 @@
 - name: Installing base packages
+  become: true
   package:
     name:
       - git

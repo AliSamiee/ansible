@@ -5,6 +5,7 @@
     state: directory
 
 - name: Add ZDOTDIR
+  become: true
   copy:
     content: 'export ZDOTDIR="$HOME"/.config/zsh'
     dest: /etc/zsh/zshenv
