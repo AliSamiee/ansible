@@ -16,8 +16,3 @@
     mode: 0755
     state: directory
 
-- name: Download wlfft.aur module
-  ansible.builtin.get_url:
-    url: https://raw.githubusercontent.com/kewlfft/ansible-aur/master/plugins/modules/aur.py
-    dest: "{{ homedir }}/.ansible/plugins/modules/aur.py"
-

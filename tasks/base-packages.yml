@@ -9,12 +9,17 @@
       - xterm
       - ranger
       - i3
+      - xorg-xrandr
+      - python-pip
+      - python-gobject
+      - polybar
       - rofi
       - dunst
       - neovim
       - alacritty
       - tmux
       - picom
+      - starship
       - zsh
       - maim
       - nautilus
@@ -24,5 +29,16 @@
       - xclip
       - tldr
       - ripgrep
+      - ttf-hack-nerd
+      - ttf-firacode-nerd
+      - ttf-iosevka-nerd
+      - nodejs
+      - npm
+      - go
+      - cargo
+      - unzip
+      - zip
+      - luarocks
+      - fd
       - firefox
       - chromium
