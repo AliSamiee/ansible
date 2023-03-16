@@ -2,8 +2,13 @@
   yay:
     update_cache: yes
     upgrade: yes
+  tags:
+  - yay
+
 - name: install aur packages
   yay:
     name:
     - nekoray-bin
     - visual-studio-code-bin
+  tags:
+  - yay
