@@ -4,8 +4,8 @@
   vars:
     homedir: "{{ lookup('env','HOME') }}" 
     builddir: "{{ homedir }}/.build"
-    source_key: "./.ssh/id_ed25519"
-    dest_key: "{{ homedir }}/.ssh/id_ed25519"
+    source_key: "./.ssh/id_rsa"
+    dest_key: "{{ homedir }}/.ssh/id_rsa"
 
   pre_tasks:
   - name: do a "pacman -Syu"
