@@ -16,7 +16,8 @@
       upgrade: true
 
   tasks:
-    - include: tasts/ssh.yml
+    - include: tasks/ssh.yml
+    - include: tasks/git-setup.yml
     - include: tasks/base-packages.yml
     - include: tasks/yay.yml
     - include: tasks/yay-packages.yml

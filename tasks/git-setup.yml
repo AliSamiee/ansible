@@ -1,0 +1,5 @@
+- name: Copy git config
+  copy:
+    src: "./git"
+    dest: "{{ homedir }}/.config/"
+    mode: 0700
