@@ -12,14 +12,14 @@
     mode: 0600
   tags:
     - ssh
-- name: Install ssh key public
+- name: Install public ssh key
   copy:
     src: "{{ source_key }}.pub"
     dest: "{{ dest_key }}.pub"
     mode: 0644
   tags:
     - ssh
-- name: Set authorized key took from file
+- name: Set SSH authorized key
   ansible.posix.authorized_key:
     user: "{{ lookup('env', 'USER') }}"
     state: present

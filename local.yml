@@ -8,7 +8,7 @@
     dest_key: "{{ homedir }}/.ssh/id_rsa"
 
   pre_tasks:
-  - name: do a "pacman -Syu"
+  - name: Update pacman cache and perform a system upgrade
     become: true
     community.general.pacman:
       update_cache: true
