@@ -4,21 +4,23 @@
     dest: "{{ builddir }}/yay"
     update: true
   tags:
-  - yay
+    - yay
+    - aur
 
 - name: Build and install yay
-  become: true
   command:
     chdir: "{{ builddir }}/yay"
     cmd: "makepkg -sfi --noconfirm"
     creates: /usr/bin/yay
   tags:
-  - yay
+    - yay
+    - aur
 
 - name: Download ansible yay module
+  become: true
   ansible.builtin.get_url:
-    become: true
     url: https://github.com/mnussbaum/ansible-yay/blob/4fd5ec87f3c3ec5366376b30317714fee7e20b06/yay
     dest: /usr/share/ansible/yay
   tags:
-  - yay
+    - yay
+    - aur

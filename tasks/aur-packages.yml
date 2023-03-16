@@ -1,0 +1,11 @@
+- name: Installing AUR packages
+  community.general.pacman:
+    name:
+      - nekoray-bin
+      - visual-studio-code-bin
+    state: present
+    executable: yay
+    # extra_args: --builddir /var/cache/yay
+  tags:
+    - yay
+    - aur
