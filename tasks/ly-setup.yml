@@ -1,0 +1,10 @@
+- name: Setup ly
+  become: true
+  systemd:
+    name: ly.service
+    enabled: true
+    masked: no
+
+  systemd:
+    name: getty@tty2.service
+    enabled: false

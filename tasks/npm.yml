@@ -1,0 +1,4 @@
+- name: Install neovim package
+  npm:
+    name: neovim
+    global: yes
