@@ -3,24 +3,21 @@
     repo: https://aur.archlinux.org/yay-bin.git
     dest: "{{ builddir }}/yay"
     update: true
-  tags:
-    - yay
-    - aur
 
 - name: Build and install yay
   command:
     chdir: "{{ builddir }}/yay"
     cmd: "makepkg -sfi --noconfirm"
     creates: /usr/bin/yay
-  tags:
-    - yay
-    - aur
 
-- name: Download ansible yay module
-  become: true
+- name: Ensure ansible modules folder exists
+  file:
+    dest: "{{ homedir }}/.ansible/plugins/modules"
+    mode: 0755
+    state: directory
+
+- name: Download wlfft.aur module
   ansible.builtin.get_url:
-    url: https://github.com/mnussbaum/ansible-yay/blob/4fd5ec87f3c3ec5366376b30317714fee7e20b06/yay
-    dest: /usr/share/ansible/yay
-  tags:
-    - yay
-    - aur
+    url: https://raw.githubusercontent.com/kewlfft/ansible-aur/master/plugins/modules/aur.py
+    dest: "{{ homedir }}/.ansible/plugins/modules/aur.py"
+
