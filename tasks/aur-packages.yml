@@ -1,5 +1,5 @@
 - name: Installing AUR packages
-  kewlfft.aur.aur:
+  aur:
     use: yay
     name:
       - nekoray-bin
