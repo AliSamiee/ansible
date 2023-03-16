@@ -1,7 +1,7 @@
 - name: do a yay -Syu
   yay:
-   update_cache: yes
-   upgrade: yes
+    update_cache: yes
+    upgrade: yes
 - name: install aur packages
   yay:
     name:

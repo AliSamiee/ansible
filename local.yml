@@ -16,11 +16,11 @@
       upgrade: true
 
   tasks:
-    - include: tasks/ssh.yml
-    - include: tasks/git-setup.yml
-    - include: tasks/base-packages.yml
-    - include: tasks/yay.yml
-    - include: tasks/yay-packages.yml
-    - include: tasks/zshenv.yml
-    - include: tasks/zap.yml
-    - include: tasks/dotfiles.yml
+    - include_tasks: tasks/ssh.yml
+    - include_tasks: tasks/git-setup.yml
+    - include_tasks: tasks/base-packages.yml
+    - include_tasks: tasks/yay.yml
+    - include_tasks: tasks/yay-packages.yml
+    - include_tasks: tasks/zshenv.yml
+    - include_tasks: tasks/zap.yml
+    - include_tasks: tasks/dotfiles.yml
