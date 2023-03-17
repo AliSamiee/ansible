@@ -39,6 +39,7 @@
       - zip
       - luarocks
       - fd
+      - fakeroot
       - polkit
       - polkit-gnome
       - firefox
