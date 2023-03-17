@@ -1,8 +1,9 @@
 - name: Install AUR packages
-  become_user: aur_builder
-  aur:
-    use: yay
+  community.general.pacman:
     name:
       - nekoray-bin
       - visual-studio-code-bin
       - ly
+    state: present
+    executable: yay
+    extra_args: --builddir "{{ homedir }}/.cache/yay"
