@@ -28,6 +28,7 @@
     - include_tasks: tasks/pacman-setup.yml
     - include_tasks: tasks/base-packages.yml
     - include_tasks: tasks/yay.yml
+    - include_tasks: tasks/aur-builder.yml
     - include_tasks: tasks/aur-packages.yml
     - include_tasks: tasks/ly-setup.yml
     - include_tasks: tasks/zsh.yml
