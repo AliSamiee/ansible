@@ -44,3 +44,8 @@
       - polkit-gnome
       - firefox
       - chromium
+- name: Install neovim npm package
+  become: true
+  npm:
+    name: neovim
+    global: true
