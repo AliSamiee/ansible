@@ -1,0 +1,10 @@
+- name: Configure pacman
+  become: true
+  lineinfile:
+    path: /etc/pacman.conf
+    search_string: '#Color'
+    line: 'Color'
+  lineinfile:
+    path: /etc/pacman.conf
+    search_string: '#ParallelDownloads = 5'
+    line: 'ParallelDownloads = 4'
