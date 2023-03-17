@@ -27,10 +27,10 @@
     - include_tasks: tasks/git-setup.yml
     - include_tasks: tasks/pacman-setup.yml
     - include_tasks: tasks/base-packages.yml
-    - include_tasks: tasks/npm.yml
     - include_tasks: tasks/yay.yml
     - include_tasks: tasks/aur-packages.yml
     - include_tasks: tasks/ly-setup.yml
+    - include_tasks: tasks/zsh.yml
     - include_tasks: tasks/zshenv.yml
     - include_tasks: tasks/zap.yml
     - include_tasks: tasks/dotfiles.yml

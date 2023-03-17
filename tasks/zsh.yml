@@ -2,6 +2,7 @@
   become: true
   package: 
     name: zsh
+    state: present
 
 - name: Change user's default shell
   shell: chsh -s /usr/bin/zsh
