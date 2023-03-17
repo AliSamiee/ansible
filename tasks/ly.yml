@@ -1,0 +1,24 @@
+- name: Clone ly
+  git:
+    repo: https://github.com/fairyglade/ly
+    dest: "{{ builddir }}/ly"
+    recursive: true
+    update: true
+
+- name: Build and install ly
+  become: true
+  command:
+    chdir: "{{ builddir }}/ly"
+    cmd: "make install installsystemd"
+    creates: /usr/bin/ly
+
+- name: Setup ly
+  become: true
+  systemd:
+    name: ly.service
+    enabled: true
+    masked: no
+
+  systemd:
+    name: getty@tty2.service
+    enabled: false
