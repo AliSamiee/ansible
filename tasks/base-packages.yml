@@ -40,5 +40,7 @@
       - zip
       - luarocks
       - fd
+      - polkit
+      - polkit-gnome
       - firefox
       - chromium
