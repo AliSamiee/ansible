@@ -4,5 +4,8 @@
     name: zsh
     state: present
 
-- name: Change user's default shell
-  shell: chsh -s /usr/bin/zsh
+- name: Change user shell to zsh 
+  become: yes
+  user:
+    name: "{{ user_name }}"
+    shell: /usr/bin/zsh
