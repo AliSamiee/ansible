@@ -15,6 +15,13 @@
       update_cache: true
       upgrade: true
 
+  - name: Install git and openssh
+    become: true
+    community.general.pacman:
+      name:
+        - git
+        - openssh
+
   tasks:
     - include_tasks: tasks/ssh.yml
     - include_tasks: tasks/git-setup.yml
