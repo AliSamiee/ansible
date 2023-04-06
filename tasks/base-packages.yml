@@ -8,6 +8,7 @@
       - curl
       - xterm
       - ranger
+      - feh
       - i3
       - xorg-xrandr
       - python-pip
@@ -38,6 +39,7 @@
       - unzip
       - zip
       - luarocks
+      - exa
       - fd
       - fakeroot
       - polkit
